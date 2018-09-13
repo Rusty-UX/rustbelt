@@ -44,6 +44,6 @@ fields:
   name: post_content
   label: post content
   template_types:
-  - post-content
+  - image
 pages:
 - _posts/2018-09-13-es.md
