@@ -11,8 +11,8 @@ publish_date: 2017-12-01 04:00:00 +0000
 show_staff: false
 menu:
   footer:
-    identifier: _about
-    weight: 3
+    identifier: _projects
+    weight: 1
   navigation:
     identifier: _about
     weight: 2
