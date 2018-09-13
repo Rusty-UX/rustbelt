@@ -1,0 +1,8 @@
+---
+label: post content
+hide_body: false
+is_partial: true
+fields:
+- type: blocks
+  name: post_content
+  label: post content
