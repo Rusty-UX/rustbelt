@@ -1,0 +1,9 @@
+---
+label: image2
+hide_body: false
+is_partial: true
+display_field: image
+fields:
+- type: file
+  label: image
+  name: image
