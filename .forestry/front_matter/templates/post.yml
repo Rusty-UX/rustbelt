@@ -39,5 +39,9 @@ fields:
   type: text
   hidden: true
   default: post
+- type: include
+- type: blocks
+  name: post_content
+  label: post content
 pages:
 - _posts/es.md
