@@ -43,5 +43,7 @@ fields:
 - type: blocks
   name: post_content
   label: post content
+  template_types:
+  - post-content
 pages:
 - _posts/es.md
