@@ -15,4 +15,3 @@ Belkirk College of Engineering is available:
 - **Sundays**, 9:00am to 12:00pm EST
 
 ## Contact Information
-{% include address.html %}
