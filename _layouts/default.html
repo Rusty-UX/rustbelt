@@ -16,13 +16,12 @@
 
 {{ content }}
 
-{% for block in post.post_content %}
+{% for block in page.post_content %}
     {% assign template = block.template %}
-    {% case template%}
-    {% when 'hero-section' %}
-        {% include blocks/hero.html %}
-    {% when 'call-to-action' %}
-        {% include blocks/cta.html %}
+    {% case template %}
+    {% when 'post-content' %}
+        {% include blocks/image.html %}
+        TOLO
     {% endcase %}
 {% endfor %}
 
