@@ -1,0 +1,46 @@
+---
+label: image
+hide_body: false
+is_partial: true
+fields:
+- type: file
+  label: image
+  name: image
+- type: textarea
+  default: caption
+  label: caption
+  name: caption
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: select
+  name: caption_alignment
+  config:
+    source:
+      type: simple
+    options:
+    - left
+    - right
+    - bottom
+  label: caption alignment
+- type: boolean
+  name: use_image_matte
+  label: use image matte?
+- type: color
+  config:
+    color_format: RGB
+  label: background color 1
+  name: bg_color_1
+- type: color
+  config:
+    color_format: RGB
+  label: background color 2
+  name: bg_color_2
+- type: number
+  name: bg_opacity
+  label: background opacity
+  config:
+    min: '0'
+    max: '1'
+    step: '0.05'
