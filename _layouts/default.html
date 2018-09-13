@@ -16,5 +16,15 @@
 
 {{ content }}
 
+{% for block in post.post_content %}
+    {% assign template = block.template %}
+    {% case template%}
+    {% when 'hero-section' %}
+        {% include blocks/hero.html %}
+    {% when 'call-to-action' %}
+        {% include blocks/cta.html %}
+    {% endcase %}
+{% endfor %}
+
 {% include footer.html %}
 
