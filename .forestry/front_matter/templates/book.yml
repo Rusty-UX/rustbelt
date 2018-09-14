@@ -1,7 +1,7 @@
 ---
-label: book review
+label: book
 hide_body: false
-is_partial: true
+is_partial: false
 fields:
 - type: text
   name: book_isbn
