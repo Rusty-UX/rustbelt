@@ -31,5 +31,8 @@ post_content:
   quote_offset: '2'
   quote_alignment: right
 - template: quote
+  quote_content: Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do
+    eiusmod *tempor incididunt ut labore et dolore magna aliqua.
+  quote_author: Quote author
 
 ---
