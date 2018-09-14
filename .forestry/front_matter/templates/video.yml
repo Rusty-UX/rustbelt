@@ -1,0 +1,30 @@
+---
+label: video
+hide_body: false
+is_partial: true
+fields:
+- type: select
+  name: video_type
+  config:
+    source:
+      type: simple
+    options:
+    - youtube
+    - vimeo
+  label: video type
+- type: text
+  name: video_id
+  label: Video ID
+- type: textarea
+  name: video_title
+  label: Video title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: video_subtitle
+  label: Video subtitle
+- type: file
+  name: video_image_overlay
+  label: Video image overlay
