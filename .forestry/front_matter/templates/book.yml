@@ -53,3 +53,5 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+pages:
+- _books/testing-post-theme.md
