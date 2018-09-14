@@ -1,0 +1,22 @@
+---
+label: quote
+hide_body: false
+is_partial: true
+fields:
+- type: textarea
+  name: quote_content
+  label: quote content
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: quote_author
+  label: quote author
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: boolean
+  name: emphasize_quote
+  label: Emphasize quote
