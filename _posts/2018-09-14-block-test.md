@@ -18,6 +18,8 @@ post_content:
   bg_color_2: rgb(255, 255, 255)
   bg_angle: '45'
   bg_opacity: '0.5'
-
+- template: video
+- template: pull-quote-and-paragraph
+- template: quote
 
 ---
