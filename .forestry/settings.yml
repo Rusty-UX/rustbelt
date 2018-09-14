@@ -25,12 +25,12 @@ sections:
   templates:
   - person
 - type: directory
-  path: _projects
-  label: Projects
+  path: _books
+  label: Books
   create: all
   match: "*"
   templates:
-  - project
+  - book
 - type: document
   path: _data/information.yml
   label: Contact Information
