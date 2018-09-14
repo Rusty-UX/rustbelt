@@ -50,6 +50,5 @@ fields:
     schema:
       format: markdown
 pages:
-- _posts/block-test.md
 - _books/lorraine-is-the-best.md
 - _books/testing-post-theme.md

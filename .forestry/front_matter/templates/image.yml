@@ -38,6 +38,9 @@ fields:
   label: background color 2
   name: bg_color_2
 - type: number
+  name: bg_angle
+  label: background angle
+- type: number
   name: bg_opacity
   label: background opacity
   config:
