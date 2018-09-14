@@ -46,4 +46,5 @@ fields:
   template_types:
   - image
 pages:
+- _posts/block-test.md
 - _posts/2018-09-13-es.md
