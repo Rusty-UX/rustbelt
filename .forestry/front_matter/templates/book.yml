@@ -1,0 +1,55 @@
+---
+label: book
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: book_isbn
+  label: Book ISBN
+- type: text
+  name: goodreads_link
+  label: goodreads link
+- type: text
+  name: buy_link
+  label: Buy link
+- type: select
+  name: book_rating
+  config:
+    source:
+      type: simple
+    options:
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '10'
+  label: Book rating
+- type: textarea
+  name: book_title
+  label: Book title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: book_subtitle
+  label: Book subtitle
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: book_author
+  label: Book Author
+- type: textarea
+  name: book_review
+  label: Book review
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
