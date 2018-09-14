@@ -25,6 +25,11 @@ post_content:
   video_image_overlay: "/uploads/2018/09/14/potato.jpg"
   video_type: youtube
 - template: pull-quote-and-paragraph
+  main_content: Main content
+  quote_content: Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do
+    eiusmod *tempor incididunt ut labore et dolore magna aliqua.
+  quote_offset: '2'
+  quote_alignment: right
 - template: quote
 
 ---
