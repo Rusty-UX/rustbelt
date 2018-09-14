@@ -44,6 +44,9 @@ fields:
   name: post_content
   label: post content
   template_types:
+  - video
+  - pull-quote-and-paragraph
+  - quote
   - image
 pages:
 - _posts/2018-09-14-block-test.md
