@@ -1,0 +1,51 @@
+<?php
+	$video_type = get_sub_field('video_type');
+	$video_id = get_sub_field('video_id');
+	$video_title = get_sub_field('video_title');
+	$video_subtitle = get_sub_field('video_subtitle');
+	$video_image_overlay = get_sub_field('video_image_overlay');
+?>
+<?php if($video_type == "vimeo"){ ?>
+	<figure>
+		<div class="video-container">
+			<div class="video-overlay">
+				<div class="video-play">▶</div>
+				<div class="video-cover">
+					<?php
+						$attachment_id = get_sub_field("video_image_overlay");
+						$img_src = wp_get_attachment_image_url( $attachment_id, 'width_800' );
+						$img_srcset = wp_get_attachment_image_srcset( $attachment_id, 'width_800' );
+					?>
+						<img class="cover" data-src="<?php echo esc_url( $img_src ); ?>"
+					     data-srcset="<?php echo esc_attr( $img_srcset ); ?>"
+					     sizes="(min-width: 600px) 800px, 100vw" alt=""/>
+				</div>			
+			</div>
+			<iframe data-src="https://player.vimeo.com/video/<?php echo $video_id ?>?autoplay=1&byline=0&title=0&color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		<figcaption class="st-light"><?php text_processor($video_title,0,1); ?></figcaption>
+	</figure>
+<?php
+	}else if($video_type == "youtube"){ ?>
+		<figure>
+		<div class="video-container">
+			<div class="video-overlay">
+				<div class="video-play">▶</div>
+				<div class="video-cover">
+					<?php
+						$attachment_id = get_sub_field("video_image_overlay");
+						$img_src = wp_get_attachment_image_url( $attachment_id, 'width_800' );
+						$img_srcset = wp_get_attachment_image_srcset( $attachment_id, 'width_800' );
+					?>
+						<img class="cover" data-src="<?php echo esc_url( $img_src ); ?>"
+					     data-srcset="<?php echo esc_attr( $img_srcset ); ?>"
+					     sizes="(min-width: 600px) 800px, 100vw" alt=""/>
+				</div>			
+			</div>			
+			<iframe id="ytplayer" type="text/html" width="720" height="405" data-src="https://www.youtube.com/embed/<?php echo $video_id; ?>?autoplay=1&controls=0&showinfo=0&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<figcaption class="st-light"><?php text_processor($video_title,0,1); ?></figcaption>
+	</figure>
+	<?php }
+?>
+
