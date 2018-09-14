@@ -19,6 +19,11 @@ post_content:
   bg_angle: '45'
   bg_opacity: '0.5'
 - template: video
+  video_id: Fp0BScQSSvg
+  video_title: 'Machine Gun Kelly "Rap Devil" '
+  video_subtitle: "(Eminem Diss) (WSHH Exclusive - Official Music Video)"
+  video_image_overlay: "/uploads/2018/09/14/potato.jpg"
+  video_type: youtube
 - template: pull-quote-and-paragraph
 - template: quote
 
