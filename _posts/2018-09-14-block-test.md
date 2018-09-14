@@ -16,6 +16,8 @@ post_content:
   use_image_matte: true
   bg_color_1: rgb(255, 0, 0)
   bg_color_2: rgb(255, 255, 255)
+  bg_angle: '45'
   bg_opacity: '0.5'
+
 
 ---
