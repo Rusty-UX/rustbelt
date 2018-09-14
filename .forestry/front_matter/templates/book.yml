@@ -3,6 +3,19 @@ label: book
 hide_body: true
 is_partial: false
 fields:
+- type: textarea
+  name: book_title
+  label: book title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: text
+  name: book_author
+  label: Book Author
+- type: datetime
+  name: date
+  label: date
 - type: text
   name: book_isbn
   label: Book ISBN
@@ -29,23 +42,6 @@ fields:
     - '9'
     - '10'
   label: Book rating
-- type: textarea
-  name: book_title
-  label: Book title
-  config:
-    wysiwyg: true
-    schema:
-      format: markdown
-- type: textarea
-  name: book_subtitle
-  label: Book subtitle
-  config:
-    wysiwyg: true
-    schema:
-      format: markdown
-- type: text
-  name: book_author
-  label: Book Author
 - type: textarea
   name: book_review
   label: Book review
