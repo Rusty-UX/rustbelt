@@ -59,26 +59,17 @@ post_content:
       &lt;/div&gt;
     &lt;/nav&gt;</code></pre>
 - template: code
-  code: |-
-    {%- capture bg_color_1 -%}{{ page.bg_color_1 }}{%- endcapture -%}
-
-    {%- capture bg_color_2 -%}{{ page.bg_color_2 }}{%- endcapture -%}
-
-    {%- capture gradient_angle -%}{{ page.gradient_angle }}{%- endcapture -%}
-
-    {%- capture content_bg_color -%}{{ page.content_bg_color }}{%- endcapture -%}
-
-    {%- capture heading_color -%}{{ page.heading_color }}{%- endcapture -%}
-
-    {%- capture heading_link_color -%}{{ page.heading_link_color }}{%- endcapture -%}
-
-    {%- capture body_text_color -%}{{ page.body_text_color }}{%- endcapture -%}
-
-    {%- capture nav_text_color -%}{{ page.nav_text_color }}{%- endcapture -%}
-
-    {%- capture footer_post_link_color -%}{{ page.footer_post_link_color }}{%- endcapture -%}
-
-    {%- capture border_color -%}{{ page.border_color }}{%- endcapture -%}
+  code: |2-
+        {%- capture bg_color_1 -%}{{ page.bg_color_1 }}{%- endcapture -%}
+        {%- capture bg_color_2 -%}{{ page.bg_color_2 }}{%- endcapture -%}
+        {%- capture gradient_angle -%}{{ page.gradient_angle }}{%- endcapture -%}
+        {%- capture content_bg_color -%}{{ page.content_bg_color }}{%- endcapture -%}
+        {%- capture heading_color -%}{{ page.heading_color }}{%- endcapture -%}
+        {%- capture heading_link_color -%}{{ page.heading_link_color }}{%- endcapture -%}
+        {%- capture body_text_color -%}{{ page.body_text_color }}{%- endcapture -%}
+        {%- capture nav_text_color -%}{{ page.nav_text_color }}{%- endcapture -%}
+        {%- capture footer_post_link_color -%}{{ page.footer_post_link_color }}{%- endcapture -%}
+        {%- capture border_color -%}{{ page.border_color }}{%- endcapture -%}
 border_color: ''
 post_header_image: ''
 post_subtitle: ''
