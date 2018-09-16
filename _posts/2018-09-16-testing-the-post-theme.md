@@ -58,6 +58,27 @@ post_content:
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/nav&gt;</code></pre>
+- template: code
+  code: "<p>&lt;footer class=\"site-footer\"&gt;</p><p>\t&lt;div class=\"container
+    pure-g\"&gt;</p><p>        &lt;div class=\"footer-col pure-u-1 pure-u-md-1-4\"&gt;</p><p>
+    \           &lt;img src=\"{{ \"/img/logo-white.png\" | absolute_url }}\" alt=\"\"
+    class=\"footer-logo\"&gt;</p><p>        &lt;/div&gt;</p><p>        &lt;div class=\"footer-col
+    pure-u-1 pure-u-md-1-4\"&gt;</p><p>            &lt;h3&gt;About {{ site.short_title
+    }}&lt;/h3&gt;</p><p>            &lt;ul&gt;</p><p>            {% for item in site.menus.footer
+    %}</p><p>                &lt;li&gt;&lt;a href=\"{{ item.url | absolute_url }}\"&gt;{{
+    item.title }}&lt;/a&gt;&lt;/li&gt;</p><p>            {% endfor %}</p><p>            &lt;/ul&gt;</p><p>
+    \       &lt;/div&gt;</p><p>        &lt;div class=\"footer-col pure-u-1 pure-u-md-1-4\"&gt;</p><p>
+    \           &lt;h3&gt;Projects&lt;/h3&gt;</p><p>            &lt;ul&gt;</p><p>
+    \           {% for project in site.projects limit:5 %}</p><p>                &lt;li&gt;&lt;a
+    href=\"{{ project.url | absolute_url }}\"&gt;{{ project.title }}&lt;/a&gt;&lt;/li&gt;</p><p>
+    \           {% endfor %}</p><p>            {% if site.projects | size &gt; 5 %}</p><p>
+    \               &lt;li&gt;&lt;a href=\"{{ \"/projects/\" | absolute_url }}\"&gt;See
+    all projects&lt;/a&gt;&lt;/li&gt;</p><p>            {% endif %}</p><p>            &lt;/ul&gt;</p><p>
+    \       &lt;/div&gt;</p><p>        &lt;div class=\"footer-col pure-u-1 pure-u-md-1-4\"&gt;</p><p>
+    \           &lt;h3&gt;Contact&lt;/h3&gt;</p><p>        &lt;/div&gt;</p><p>\t&lt;/div&gt;</p><p>\t&lt;div
+    class=\"copyright\"&gt;</p><p>        &lt;p&gt;</p><p>            &amp;copy;{{
+    'now' | date: \"%Y\" }} {{ site.title }} - All Rights Reserved&lt;br&gt;</p><p>\t\t\t&lt;a
+    href=\"{{ \"/admin\" | absolute_url }}\"&gt;Site Admin&lt;/a&gt;</p><p>\t\t&lt;/p&gt;</p><p>\t&lt;/div&gt;</p><p>&lt;/footer&gt;</p>"
 border_color: ''
 post_header_image: ''
 post_subtitle: ''
