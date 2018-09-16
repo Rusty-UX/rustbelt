@@ -54,6 +54,7 @@ fields:
   - markdown
   - image
   - video
+  - code
   - pull-quote-and-paragraph
   - quote
 pages:
