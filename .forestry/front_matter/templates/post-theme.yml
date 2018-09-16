@@ -1,0 +1,64 @@
+---
+label: post theme
+hide_body: false
+is_partial: true
+display_field: bg_color_1
+fields:
+- type: color
+  name: bg_color_1
+  config:
+    color_format: RGB
+  label: background color 1
+  default: rgb(74, 144, 226)
+- type: color
+  name: bg_color_2
+  config:
+    color_format: RGB
+  label: Background color 2
+  default: rgb(144, 19, 254)
+- type: number
+  name: gradient_angle
+  label: Gradient Angle
+  default: '45'
+- type: color
+  name: content_bg_color
+  config:
+    color_format: RGB
+  label: Content Background color
+  default: rgb(255, 255, 255)
+- type: color
+  name: heading_color
+  config:
+    color_format: RGB
+  label: Heading color
+  default: rgb(0, 0, 0)
+- type: color
+  name: heading_link_color
+  config:
+    color_format: RGB
+  label: Heading link color
+  default: rgb(74, 144, 226)
+- type: color
+  name: body_text_color
+  config:
+    color_format: RGB
+  label: Body text color
+  default: rgb(54, 54, 54)
+- type: color
+  name: body_text_link_color
+  config:
+    color_format: RGB
+  label: Body text link color
+  default: rgb(74, 144, 226)
+- type: color
+  name: nav_text_color
+  config:
+    color_format: RGB
+  label: Nav text color
+  default: rgb(0, 0, 0)
+- type: color
+  name: footer_post_link_color
+  config:
+    color_format: RGB
+  label: Footer post link color
+  default: rgb(0, 0, 0)
