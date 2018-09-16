@@ -1,0 +1,17 @@
+---
+label: post header
+hide_body: true
+is_partial: false
+fields:
+- type: file
+  name: post_header_image
+  label: post header image
+- type: text
+  name: post_subtitle
+  label: post subtitle
+- type: textarea
+  name: post_description
+  label: post description
+- type: boolean
+  name: show_header_image_on_post
+  label: show header image on post
