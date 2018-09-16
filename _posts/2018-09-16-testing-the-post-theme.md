@@ -59,9 +59,10 @@ post_content:
       &lt;/div&gt;
     &lt;/nav&gt;</code></pre>
 - template: code
-  code: "    <footer class=\"site-footer\">\n        <div class=\"container pure-g\">\n
-    \           <div class=\"footer-col pure-u-1 pure-u-md-1-4\">\n            </div>\n
-    \   \t</div>\n    </footer>"
+  code: |-
+    <pre><code>&lt;footer class="site-footer"&gt;
+        &lt;div class="container pure-g"&gt;
+            &lt;div class="footer-col pure-u-1 pure-u-md-1-4"&gt;</code></pre>
 border_color: ''
 post_header_image: ''
 post_subtitle: ''
