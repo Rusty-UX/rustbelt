@@ -17,6 +17,14 @@ tags: []
 banner_image: ''
 related_posts: []
 post_content:
+- template: markdown
+  markdown: "<p>Aquaero is an interactive art experience that allows users to create
+    creatures using their hands and other objects. Once these generated creatures
+    have been made, they can be moved around by swiping across the table.<br><br>The
+    creatures interact with the environment through audio events triggered by the
+    audience, such as bubbles or lightning strikes. Flocking creatures such as jellyfish,
+    fish and birds can be found in levels and add to the interaction. Audio and Environments
+    transition seamlessly as the characters move around.</p>"
 - template: image
   caption_alignment: right
   bg_color_1: rgb(255, 255, 255)
@@ -31,5 +39,9 @@ post_content:
     dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt
     ut labore et dolore magna aliqua.
 border_color: ''
+post_header_image: ''
+post_subtitle: ''
+post_description: ''
+show_header_image_on_post: false
 
 ---
