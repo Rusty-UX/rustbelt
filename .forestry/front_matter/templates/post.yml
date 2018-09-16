@@ -8,6 +8,14 @@ fields:
   type: text
   hidden: false
   default: ''
+- type: include
+  name: post_header
+  label: post header
+  template: post-header
+- type: include
+  label: post theme
+  name: post_theme
+  template: post-theme
 - type: text
   label: Sub Heading
   name: sub_heading
@@ -22,10 +30,6 @@ fields:
   type: tag_list
   hidden: false
   default: ''
-- type: file
-  name: banner_image
-  label: Banner Image
-  description: Ideal dimensions 2500px by 1200px
 - type: list
   name: related_posts
   label: Related Posts
@@ -34,15 +38,15 @@ fields:
     source:
       type: pages
       section: posts
+- type: file
+  name: banner_image
+  label: Banner Image
+  description: Ideal dimensions 2500px by 1200px
 - name: layout
   label: Layout
   type: text
   hidden: true
   default: post
-- type: include
-  label: post theme
-  name: post_theme
-  template: post-theme
 - type: blocks
   name: post_content
   label: post content
@@ -51,10 +55,6 @@ fields:
   - pull-quote-and-paragraph
   - quote
   - image
-- type: include
-  name: post_header
-  label: post header
-  template: post-header
 pages:
 - _posts/2018-09-16-testing-the-post-theme.md
 - _posts/2018-09-14-block-test.md
