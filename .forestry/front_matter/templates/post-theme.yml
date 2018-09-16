@@ -1,8 +1,7 @@
 ---
 label: post theme
 hide_body: false
-is_partial: true
-display_field: bg_color_1
+is_partial: false
 fields:
 - type: color
   name: bg_color_1
