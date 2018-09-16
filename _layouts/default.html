@@ -1,29 +1,30 @@
-{% comment %}
+{%- comment -%}
 	The default layout for the site, which is extended by all other layouts.
 	Includes the document <head>, main navigation and page footer
-{% endcomment %}
+{%- endcomment -%}
 
-{% include head.html %}
+{%- include head.html -%}
 
-{% include nav.html %}
+{%- include nav.html -%}
 
-{% include hero.html %}
+{%- include hero.html -%}
 
-{% comment %}
+{%- comment -%}
 	Any layout that extends this layout will have its contents
 	added as the content variable
-{% endcomment %}
+{%- endcomment -%}
 
 {{ content }}
 
-{% for block in page.post_content %}
-    {% assign template = block.template %}
-    {% case template %}
-    {% when 'image' %}
-        {% include blocks/image.html %}
-        TOLO
-    {% endcase %}
-{% endfor %}
+{%- for block in page.post_content -%}
+    {%- assign template = block.template -%}
+    {%- case template -%}
+    {%- when 'image' -%}
+        {%- include blocks/image.html -%}
+    {%- when 'video' -%}
+        {%- include blocks/video.html -%}
+    {%- endcase -%}
+{%- endfor -%}
 
-{% include footer.html %}
+{%- include footer.html -%}
 

@@ -1,9 +1,8 @@
-{% capture video_type %}{{ block.video_type }}{% endcapture %}
-{% capture video_id %}{{ block.video_id }}{% endcapture %}
-{% capture video_title %}{{ block.video_title }}{% endcapture %}
-{% capture video_subtitle %}{{ block.video_subtitle }}{% endcapture %}
-{% capture video_image_overlay %}{{ block.video_image_overlay }}{% endcapture %}
-
+{%- capture video_type -%}{{ block.video_type }}{%- endcapture -%}
+{%- capture video_id -%}{{ block.video_id }}{%- endcapture -%}
+{%- capture video_title -%}{{ block.video_title }}{%- endcapture -%}
+{%- capture video_subtitle -%}{{ block.video_subtitle }}{%- endcapture -%}
+{%- capture video_image_overlay -%}{{ block.video_image_overlay }}{%- endcapture -%}
 <figure>
 	<div class="video-container">
 		<div class="video-overlay">
@@ -12,15 +11,14 @@
 					<img class="cover" data-src="" src="{{ video_image_overlay }}"/>
 			</div>			
 		</div>
-		{% if video_type == "vimeo" %}
+		{%- if video_type == "vimeo" -%}
 		<iframe data-src="https://player.vimeo.com/video/{{video_id}}?autoplay=1&byline=0&title=0&color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		{% elsif video_type == "youtube" %}
-		<iframe id="ytplayer" type="text/html" width="720" height="405" data-src="https://www.youtube.com/embed/{{video_id}}?autoplay=1&controls=0&showinfo=0&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe>
-		{% endif %}
+		{%- elsif video_type == "youtube" -%}
+		<iframe id="ytplayer" type="text/html" data-src="https://www.youtube.com/embed/{{video_id}}?autoplay=1&controls=0&showinfo=0&modestbranding=1&color=white" frameborder="0" allowfullscreen></iframe>
+		{%- endif -%}
 	</div>
 	<figcaption class="st-light">
 		<span class="video-title">{{ video_title}}</span>
 		<span class="video-subtitle">{{ video_subtitle}}</span>
 	</figcaption>
 </figure>
-
