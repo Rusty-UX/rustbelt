@@ -8,6 +8,6 @@ fields:
   label: markdown
   name: markdown
   config:
-    wysiwyg: false
+    wysiwyg: true
     schema:
       format: markdown
