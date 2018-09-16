@@ -11,3 +11,4 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+  default: "    ENTER CODE HERE!"
