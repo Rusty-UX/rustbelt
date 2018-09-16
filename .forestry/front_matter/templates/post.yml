@@ -40,6 +40,9 @@ fields:
   hidden: true
   default: post
 - type: include
+  label: post theme
+  name: post_theme
+  template: post-theme
 - type: blocks
   name: post_content
   label: post content
