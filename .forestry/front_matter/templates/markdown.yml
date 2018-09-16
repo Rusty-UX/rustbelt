@@ -1,0 +1,13 @@
+---
+label: markdown
+hide_body: false
+is_partial: true
+display_field: markdown
+fields:
+- type: textarea
+  label: markdown
+  name: markdown
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
