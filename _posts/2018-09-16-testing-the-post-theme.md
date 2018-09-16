@@ -31,13 +31,33 @@ post_content:
   bg_color_2: rgb(255, 255, 255)
   bg_angle: '0'
   bg_opacity: '1'
+  image: "/uploads/2017/11/14/andrew-robles-300868.jpg"
   caption: Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod
-    *tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-    consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et
-    dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adip*isicing elit,
-    sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-    dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt
-    ut labore et dolore magna aliqua.
+    *tempor incididunt ut labore et dolore magna aliqua.
+- template: markdown
+  markdown: |-
+    <pre><code>&lt;nav class="navigation"&gt;
+      &lt;div class="nav-wrapper"&gt;
+        &lt;div class="nav-list"&gt;
+        &lt;div class="nav-logo-container"&gt;
+            &lt;div class="nav-logo"&gt;
+              &lt;a href="&lt;?php echo esc_url( home_url( '/' ) ); ?&gt;"&gt;
+                &lt;div class="logo-container"&gt;
+                  &lt;?php include "nav-logo.php" ?&gt;
+                &lt;/div&gt;
+              &lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="nav-links-container"&gt;
+          {%- for link in site.menus.navigation -%}
+            &lt;div class="nav-item"&gt;
+              &lt;a href="{{ link.url }}"&gt;{{ link.title }}&lt;/a&gt;
+            &lt;/div&gt;
+          {%- endfor -%}
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;</code></pre>
 border_color: ''
 post_header_image: ''
 post_subtitle: ''
