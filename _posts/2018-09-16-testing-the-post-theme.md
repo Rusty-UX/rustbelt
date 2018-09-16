@@ -65,7 +65,7 @@ post_content:
             &lt;div class="footer-col pure-u-1 pure-u-md-1-4"&gt;</code></pre>
 border_color: ''
 post_header_image: ''
-post_subtitle: ''
+post_subtitle: This is the subtitle, let's see if it works.
 post_description: ''
 show_header_image_on_post: false
 
