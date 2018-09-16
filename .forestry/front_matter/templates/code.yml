@@ -1,0 +1,13 @@
+---
+label: code
+hide_body: false
+is_partial: true
+display_field: code
+fields:
+- type: textarea
+  name: code
+  label: code
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
