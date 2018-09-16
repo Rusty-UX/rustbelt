@@ -51,6 +51,10 @@ fields:
   - pull-quote-and-paragraph
   - quote
   - image
+- type: include
+  name: post_header
+  label: post header
+  template: post-header
 pages:
 - _posts/2018-09-16-testing-the-post-theme.md
 - _posts/2018-09-14-block-test.md
