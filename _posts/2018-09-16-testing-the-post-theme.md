@@ -16,6 +16,20 @@ sub_heading: ''
 tags: []
 banner_image: ''
 related_posts: []
-post_content: []
+post_content:
+- template: image
+  caption_alignment: right
+  bg_color_1: rgb(255, 255, 255)
+  bg_color_2: rgb(255, 255, 255)
+  bg_angle: '0'
+  bg_opacity: '1'
+  caption: Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod
+    *tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
+    consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et
+    dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adip*isicing elit,
+    sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
+    dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt
+    ut labore et dolore magna aliqua.
+border_color: ''
 
 ---
