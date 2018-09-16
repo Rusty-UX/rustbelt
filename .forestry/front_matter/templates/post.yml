@@ -51,10 +51,11 @@ fields:
   name: post_content
   label: post content
   template_types:
+  - markdown
+  - image
   - video
   - pull-quote-and-paragraph
   - quote
-  - image
 pages:
 - _posts/2018-09-16-testing-the-post-theme.md
 - _posts/2018-09-14-block-test.md
