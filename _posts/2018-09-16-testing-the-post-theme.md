@@ -12,5 +12,10 @@ body_text_link_color: rgb(74, 144, 226)
 nav_text_color: rgb(0, 0, 0)
 footer_post_link_color: rgb(0, 0, 0)
 date: 2018-09-16 00:00:00 +0000
+sub_heading: ''
+tags: []
+banner_image: ''
+related_posts: []
+post_content: []
 
 ---
