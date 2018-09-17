@@ -64,7 +64,7 @@ post_content:
         &lt;div class="container pure-g"&gt;
             &lt;div class="footer-col pure-u-1 pure-u-md-1-4"&gt;</code></pre>
 border_color: ''
-post_header_image: "/uploads/2018/09/16/21951064_10160078799210377_217620292222797639_o.jpg"
+post_header_image: "/uploads/2018/09/17/L1040088.jpeg"
 post_subtitle: This is the subtitle, let's see if it works.
 post_description: Test
 show_header_image_on_post: true
