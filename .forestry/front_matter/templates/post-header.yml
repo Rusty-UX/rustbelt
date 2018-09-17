@@ -24,3 +24,4 @@ fields:
     - contain
   label: Header type
   name: header_type
+  default: cover
