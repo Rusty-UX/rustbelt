@@ -15,3 +15,12 @@ fields:
 - type: boolean
   name: show_header_image_on_post
   label: show header image on post
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - cover
+    - contain
+  label: Header type
+  name: header_type
