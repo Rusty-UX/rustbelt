@@ -1,0 +1,12 @@
+hr{
+	width: 33.333%;
+	position: relative;
+	display: block;
+	margin: 6rem auto;
+	border: none;
+	border-top: 3px solid $color-black;
+}
+
+hr.footnote-separator{
+	width: 100%;
+}

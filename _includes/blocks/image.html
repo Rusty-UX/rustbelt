@@ -6,7 +6,7 @@
 {%- capture bg_color_2 -%}{{ block.bg_color_2 }}{%- endcapture -%}
 {%- capture bg_angle -%}{{ block.bg_angle }}{%- endcapture -%}
 {%- capture bg_opacity -%}{{ block.bg_opacity }}{%- endcapture -%}
-<div class="content-gallery {%- if use_image_matte == 'true' -%}content-gallery-matte{%- endif -%}">
+<div class="content-gallery {% if use_image_matte == 'true' %}content-gallery-matte{% endif %}">
 	{%- if use_image_matte == 'true' -%}
 		<div class="image-matte-bg" style="background-image:linear-gradient({{ bg_angle }}deg, {{ bg_color_1 }}, {{ bg_color_2 }}); opacity: {{ bg_opacity }};"></div>
 	{%- endif -%}

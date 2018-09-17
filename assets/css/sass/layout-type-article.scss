@@ -1,0 +1,246 @@
+// LAYOUT - ARTICLE
+
+.home-link{
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  position: absolute;
+  color: black;
+  z-index: 20;
+  font-family: $sans-stack;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+.home-link:hover{
+	opacity: 1;
+	color: black;
+}
+
+.home-link a{
+	color: black;
+	text-decoration: none;
+}
+
+.article-wrapper{
+
+	.article-content-container{
+		max-width: 32.5rem;
+		margin: 0 auto;
+	}
+	p, ul, ol{
+		@media screen and (min-width: 1200px) {
+			line-height: 1.6;
+		}
+	}
+
+	p code,
+	li code{
+    font-family: $mono-stack;
+    border-radius: 3px;
+    position: relative;
+    display: inline;
+    font-style: normal;
+	}
+
+	.article-top-layer{
+		padding: 0 0.5rem;
+		@media screen and (min-width: 1600px) {
+			padding: 0 1rem;
+		}
+	}
+
+	.article-header-image img{
+		width: 100%;
+	}
+
+	.base-bg-layer-article{
+		opacity: 1;
+	}
+
+	.article-header-image + .base-content-container{
+		padding-top: 3rem;
+	}
+
+	.article-subtitle{
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.article-header-container{
+		max-width: 40rem;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 4rem;
+		text-align: center;
+
+		h1{
+			margin-top: 0;
+			margin-bottom: 0;
+			@media screen and (min-width: 1200px) {
+				letter-spacing: -0.025em;
+			}
+		}
+		@media screen and (min-width: 800px) {
+			.article-title-50{
+				font-size: 2.5rem;
+			}
+			.article-title-40{
+				font-size: 3rem;
+			}
+			.article-title-30{
+				font-size: 3.5rem;
+			}
+		}
+	}
+
+	a{
+		color: inherit;
+	}
+
+	ul, ol{
+		font-size: 1rem;
+		padding-left: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	li{
+		margin-bottom: 1rem;
+	}
+}
+
+.header-image .article-wrapper{
+  margin-top: 0;
+}
+
+.next-previous-container{
+	position: relative;
+	z-index: 5;
+	padding: 2rem 1rem;
+	display: flex;
+	justify-content: space-between;
+
+	.control-label-action{
+		display: inline-block;
+	}
+
+	.control-post-name{
+		font-size: 1.25rem;
+		transition: all 0.3s ease;
+	}
+
+	.previous-container{
+		margin-right: 2rem;
+	}
+
+	.control-container{
+		max-width: calc(50% - 1rem);
+		font-size: 1rem;
+	}
+
+	.control-label{
+		display: block;
+    font-variant: all-small-caps;
+		font-size: 1rem;
+		letter-spacing: 0.125em;
+		font-family: $sans-stack;
+		transition: all 0.3s ease;
+		opacity: 0.875;
+		margin-bottom: -0.25rem;
+	}
+
+	.next-label,
+	.next-post-name{
+		text-align: right;
+	}
+
+	.control-container a{
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.header-image-contain .article-header-image{
+  position: relative;
+  width: calc(100% + 4rem);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  @media screen and (min-width: 1600px) {
+  	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 65rem;
+  }
+
+  img{
+  	max-width: 40rem;
+  	margin: 0 auto;
+  	display: block;
+  }
+}
+
+.header-image-cover .article-header-image{
+  position: relative;
+  width: calc(100% + 4rem);
+  height: 40vh;
+  margin-left: -2rem;
+  margin-right: -2rem;
+
+  @media screen and (min-width: 1600px) {
+  	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 65rem;
+  }
+}
+
+.article-header-image .header-image-bg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.next-container a:hover .control-label{
+	transform: translateX(0.875rem);
+	opacity: 1;
+}
+
+.next-container a:hover .control-post-name{
+	transform: translateX(0.5rem);
+}
+
+.next-container a:hover .control-label-action{
+	animation: 1s ease point_right infinite;
+}
+
+.previous-container a:hover .control-label{
+	transform: translateX(-0.875rem);
+	opacity: 1;
+}
+
+.previous-container a:hover .control-post-name{
+	transform: translateX(-0.5rem);
+}
+
+.previous-container a:hover .control-label-action{
+	animation: 1s ease point_left infinite;
+}
+
+@keyframes point_left {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(-0.33rem);}
+    100%{transform: translateX(0);}
+}
+
+@keyframes point_right {
+    0%{transform: translateX(0);}
+    50%{transform: translateX(0.33rem);}
+    100%{transform: translateX(0);}
+}
+
+

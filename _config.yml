@@ -1,7 +1,9 @@
 title: Belkirk College of Engineering
 short_title: Belkirk
 description: Belkirk Demo Site for Forestry.io
-baseurl:
+baseurl: 
+sass:
+  sass_dir: assets/css/sass
 permalink: /:categories/:year/:title:output_ext
 defaults:
   - scope:
