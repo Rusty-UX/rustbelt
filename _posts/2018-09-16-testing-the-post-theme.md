@@ -67,7 +67,7 @@ border_color: ''
 post_header_image: "/uploads/2018/09/16/21951064_10160078799210377_217620292222797639_o.jpg"
 post_subtitle: This is the subtitle, let's see if it works.
 post_description: Test
-show_header_image_on_post: true
+show_header_image_on_post: false
 header_type: contain
 
 ---
