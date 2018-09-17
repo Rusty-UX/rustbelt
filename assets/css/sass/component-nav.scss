@@ -38,6 +38,7 @@
 	.logo-container{
 		width: 2rem;
 		height: 2rem;
+		background-color: white;
 	}
 
 	.logo-container svg{
@@ -64,13 +65,10 @@
 
 	a{
 		text-decoration: none;
-		font-size: 1rem;
-		letter-spacing: 0.125em;
+		font-size: 0.75rem;
+		letter-spacing: 0.2em;
 		text-transform: uppercase;
 		font-variant: all-small-caps;
-		@media screen and (min-width: 800px) {
-			font-size: 1rem;
-		}
 		font-weight: 400;
 		color: white; 
 		line-height: 1.5;
