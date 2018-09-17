@@ -10,5 +10,5 @@ fields:
   config:
     wysiwyg: true
     schema:
-      format: markdown
-  default: "    ENTER CODE HERE!"
+      format: html-blocks
+  default: ''
