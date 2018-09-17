@@ -24,9 +24,12 @@ related_posts: []
 banner_image: ''
 post_content:
 - template: markdown
-  markdown: |-
-    For Hackdays, I decided that I’d work on a month for a designer calendar. I decided to focus on October, as it’s the peak of when all the fall colours are changing and the leaves are falling. The calendar didn’t end up panning out, but I was happy with how the lettering turned out.
-
-    I started off getting an idea of styles, and how the characters could fit together. After doing a few rough sketches, I made a couple tweaks in pen. These early sketches work to inform the higher fidelity lettering. After nailing down the style, I moved on to a larger size.
+  markdown: "<p>For Hackdays, I decided that I’d work on a month for a designer calendar.
+    I decided to focus on October, as it’s the peak of when all the fall colours are
+    changing and the leaves are falling. The calendar didn’t end up panning out, but
+    I was happy with how the lettering turned out. I started off getting an idea of
+    styles, and how the characters could fit together. After doing a few rough sketches,
+    I made a couple tweaks in pen. These early sketches work to inform the higher
+    fidelity lettering. After nailing down the style, I moved on to a larger size.</p>"
 
 ---
