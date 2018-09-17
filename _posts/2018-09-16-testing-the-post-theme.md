@@ -68,5 +68,6 @@ post_header_image: "/uploads/2018/09/16/21951064_10160078799210377_2176202922227
 post_subtitle: This is the subtitle, let's see if it works.
 post_description: Test
 show_header_image_on_post: true
+header_type: cover
 
 ---
