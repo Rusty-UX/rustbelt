@@ -1,6 +1,6 @@
 ---
 title: October Lettering
-header_type: cover
+header_type: contain
 bg_color_1: rgb(74, 144, 226)
 bg_color_2: rgb(144, 19, 254)
 gradient_angle: 45
