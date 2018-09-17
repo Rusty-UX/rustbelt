@@ -67,7 +67,7 @@ border_color: ''
 post_header_image: "/uploads/2018/09/17/L1040088.jpeg"
 post_subtitle: This is the subtitle, let's see if it works.
 post_description: Test
-show_header_image_on_post: true
+show_header_image_on_post: false
 header_type: cover
 
 ---
