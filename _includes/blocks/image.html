@@ -12,7 +12,7 @@
 	{%- endif -%}
   <figure {%- if caption_alignment == "right" -%}caption-aside{%- endif -%}>
 		<a href="{{ image }}">
-			<img src="{{ image }}"/>
+			<img src="{{ site.cloudinary_url }}/{{ image }}"/>
 		</a>
 		<figcaption class="st-light">{{ caption }}</figcaption> 
   </figure>
