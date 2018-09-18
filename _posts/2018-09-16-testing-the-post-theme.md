@@ -31,7 +31,7 @@ post_content:
   bg_color_2: rgb(255, 255, 255)
   bg_angle: '0'
   bg_opacity: '1'
-  image: "/uploads/2017/11/14/andrew-robles-300868.jpg"
+  image: "/v1537273203/map_test.png"
   caption: Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod
     *tempor incididunt ut labore et dolore magna aliqua.
 - template: markdown
