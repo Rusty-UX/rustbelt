@@ -14,7 +14,7 @@ footer_post_link_color: rgb(0, 0, 0)
 border_color: "#000000"
 layout: post
 date: 2018-09-17 00:00:00 +0000
-post_header_image: "/v1537236790/uploads/october.jpg"
+post_header_image: "/v1537237089/potato.jpg"
 post_subtitle: ''
 post_description: October Lettering
 show_header_image_on_post: true
