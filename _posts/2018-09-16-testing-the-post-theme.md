@@ -69,6 +69,7 @@ post_content:
   bg_color_2: rgb(255, 255, 255)
   bg_angle: '0'
   bg_opacity: '1'
+  image: "/v1537273402/Screen%20Shot%202018-08-09%20at%2010.30.01%20PM.png"
 border_color: ''
 post_header_image: "/uploads/2018/09/17/L1040088.jpeg"
 post_subtitle: This is the subtitle, let's see if it works.
