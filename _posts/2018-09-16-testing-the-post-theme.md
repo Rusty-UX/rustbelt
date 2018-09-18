@@ -63,6 +63,12 @@ post_content:
     <pre><code>&lt;footer class="site-footer"&gt;
         &lt;div class="container pure-g"&gt;
             &lt;div class="footer-col pure-u-1 pure-u-md-1-4"&gt;</code></pre>
+- template: image
+  caption_alignment: right
+  bg_color_1: rgb(255, 255, 255)
+  bg_color_2: rgb(255, 255, 255)
+  bg_angle: '0'
+  bg_opacity: '1'
 border_color: ''
 post_header_image: "/uploads/2018/09/17/L1040088.jpeg"
 post_subtitle: This is the subtitle, let's see if it works.
