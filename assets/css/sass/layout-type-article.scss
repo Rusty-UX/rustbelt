@@ -59,6 +59,11 @@
 		opacity: 1;
 	}
 
+	.base-content-container{
+	  padding-left: 0.5rem;
+	  padding-right: 0.5rem;
+	}
+
 	.article-header-image + .base-content-container{
 		padding-top: 3rem;
 	}
