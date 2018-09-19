@@ -85,7 +85,7 @@ post_content:
   bg_opacity: '1'
   image: "/v1537275069/Screen%20Shot%202018-04-15%20at%204.54.37%20PM.png"
 border_color: ''
-post_header_image: "/uploads/2018/09/17/L1040088.jpeg"
+post_header_image: "/v1537358567/test.jpg"
 post_subtitle: This is the subtitle, let's see if it works.
 post_description: Test
 show_header_image_on_post: true
