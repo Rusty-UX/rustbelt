@@ -12,7 +12,16 @@
 	{%- endif -%}
   <figure {%- if caption_alignment == "right" -%}caption-aside{%- endif -%}>
 		<a href="{{ image }}">
-			<img src="{{ site.cloudinary_url }}/{{ image }}"/>
+			<img
+				sizes="(max-width: 599px) 100vw, (max-width: 999px) and (min-width: 600px) 600px, (min-width: 1000px) 800px"
+				data-src="{{ site.cloudinary_url }}/w_400/q_auto:eco/{{ image | replace: 'png', 'jpg'}}"
+				data-srcset="
+				{{ site.cloudinary_url }}/w_400/q_auto:eco/{{ image | replace: 'png', 'jpg' }} 400w,
+				{{ site.cloudinary_url }}/w_800/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 800w,
+				{{ site.cloudinary_url }}/w_1200/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 1200w,
+				{{ site.cloudinary_url }}/w_1600/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 1600w,
+				{{ site.cloudinary_url }}/w_2000/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 2000w"
+				alt="">
 		</a>
 		<figcaption class="st-light">{{ caption }}</figcaption> 
   </figure>

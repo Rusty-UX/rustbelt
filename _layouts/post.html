@@ -1,4 +1,121 @@
----
-layout: default
----
+{%- capture date -%}{{ page.date | date_to_long_string }}{%- endcapture -%}
+{%- capture title -%}{{ page.title }}{%- endcapture -%}
+{%- capture subtitle -%}{{ page.post_subtitle }}{%- endcapture -%}
 
+{%- capture post_header_image -%}{{ page.post_header_image }}{%- endcapture -%}
+{%- capture post_description -%}{{ page.post_description }}{%- endcapture -%}
+{%- capture show_header_image_on_post -%}{{ page.show_header_image_on_post }}{%- endcapture -%}
+{%- capture header_type -%}{{ page.header_type }}{%- endcapture -%}
+
+{%- capture bg_color_1 -%}{{ page.bg_color_1 }}{%- endcapture -%}
+{%- capture bg_color_2 -%}{{ page.bg_color_2 }}{%- endcapture -%}
+{%- capture gradient_angle -%}{{ page.gradient_angle }}{%- endcapture -%}
+{%- capture content_bg_color -%}{{ page.content_bg_color }}{%- endcapture -%}
+{%- capture heading_color -%}{{ page.heading_color }}{%- endcapture -%}
+{%- capture heading_link_color -%}{{ page.heading_link_color }}{%- endcapture -%}
+{%- capture body_text_color -%}{{ page.body_text_color }}{%- endcapture -%}
+{%- capture nav_text_color -%}{{ page.nav_text_color }}{%- endcapture -%}
+{%- capture footer_post_link_color -%}{{ page.footer_post_link_color }}{%- endcapture -%}
+{%- capture border_color -%}{{ page.border_color }}{%- endcapture -%}
+
+{%- include head.html -%}
+
+<body class="post article {% if post_header_image != '' and show_header_image_on_post == 'true' %}header-image header-image-{{ header_type }}{%- endif -%}">
+
+	{%- include nav.html -%}
+
+	{%- include article-theme.html -%}	
+	<article 
+		itemscope="" 
+		itemtype="http://schema.org/Article" 
+		class="page-wrapper article-wrapper">
+		<div class="base-bg-layer base-bg-layer-article"></div>
+		<div id="content" class="base-top-layer article-top-layer">
+		{%- if post_header_image != "" and show_header_image_on_post == "true" -%}	
+		<div class="article-header-image">
+			{%- if header_type == "contain" -%}
+				<img src="{{ site.cloudinary_url }}/{{ post_header_image }}"/>
+				<img
+				sizes="(max-width: 599px) 100vw, (max-width: 999px) and (min-width: 600px) 800px, (min-width: 1000px) 1000px"
+				data-src="{{ site.cloudinary_url }}/w_400/q_auto:eco/{{ image | replace: 'png', 'jpg'}}"
+				data-srcset="
+				{{ site.cloudinary_url }}/w_400/q_auto:eco/{{ image | replace: 'png', 'jpg' }} 400w,
+				{{ site.cloudinary_url }}/w_800/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 800w,
+				{{ site.cloudinary_url }}/w_1200/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 1200w,
+				{{ site.cloudinary_url }}/w_1600/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 1600w,
+				{{ site.cloudinary_url }}/w_2000/q_auto:eco/{{ image | replace: 'png', 'jpg'}} 2000w"
+				alt="">
+			{%- else -%}
+				<div class="header-image-bg" style="background-image:url({{ site.cloudinary_url }}/{{ post_header_image }});"></div>
+			{%- endif -%}
+		</div>
+		{%- endif -%}
+			<div class="base-content-container">
+				<div class="article-header-container">
+						<span class="article-subtitle st-light">
+							{% if subtitle != "" %} {{ subtitle }} • {% endif %}
+							{{ date}}
+						</span>
+					<h1 itemprop="headline">{{ title }}</h1>								
+					
+				</div>
+				<div itemprop="articleBody">
+					<div class="article-content-container">
+					{%- for block in page.post_content -%}
+					{%- assign template = block.template -%}
+					{%- case template -%}
+					{%- when 'markdown' -%}
+						{%- include blocks/markdown.html -%}
+					{%- when 'image' -%}
+						{%- include blocks/image.html -%}
+					{%- when 'quote' -%}
+						{%- include blocks/quote.html -%}
+					{%- when 'video' -%}
+						{%- include blocks/video.html -%}
+					{%- when 'code' -%}
+						{%- include blocks/code.html -%}
+					{%- endcase -%}
+					{%- endfor -%}
+						<?php include "_sections/content/footnotes.php"; ?>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</article>
+<div class="next-previous-container">
+	<div class="previous-container control-container">
+		<?php $prev_post = get_adjacent_post( true, '', true); echo $post_ID; ?>
+			<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
+		  	<a href="<?php echo get_permalink( $prev_post->ID ); ?>">
+			   	<div class="previous-label control-label">
+			   		<span class="control-label-action">←</span>
+			   		<span class="control-label-text">Previous</span>
+			   	</div>
+			   	<div class="previous-post-name control-post-name">
+			   		<?php echo get_the_title( $prev_post->ID ); ?>
+			   	</div>
+		   	</a>
+			<?php } ?>
+	</div>
+	<div class="next-container control-container"> 
+		<?php $next_post = get_adjacent_post( true, '', false);?>
+			<?php if ( is_a( $next_post, 'WP_Post' ) ) { ?>
+			<?php 
+				$color_1 = get_field("bg_color_1"); 
+				$color_1 = str_replace('#', '', $color_1);
+				$color_2 = get_field("bg_color_2"); 
+				$color_2 = str_replace('#', '', $color_2);
+			?>
+		  	<a href="<?php echo get_permalink( $next_post->ID ); ?>?c1=<?php echo $color_1 ?>&c2=<?php echo $color_2 ?>">
+			   	<div class="next-label control-label">
+			   		<span class="control-label-text">Next</span>
+			   		<span class="control-label-action">→</span>
+			   	</div>
+			   	<div class="next-post-name control-post-name">
+			   		<?php echo get_the_title( $next_post->ID ); ?>
+			   	</div>
+		   	</a>
+			<?php } ?>
+		</div>
+	</div>
+{%- include footer.html -%}

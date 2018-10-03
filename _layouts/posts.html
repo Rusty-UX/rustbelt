@@ -1,22 +1,46 @@
----
-layout: default
----
-{% comment %}
-	This layout is used to by posts.md to display all of documents in
-	the _posts/ collection
-{% endcomment %}
-
-{% for post in site.posts %}
-<div class="container pure-g">
-  <div class="pure-u-1">
-      <div class="content content-narrow">
-        <div class="list-layout">
-          <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-          <div>{{ post.content | truncatewords: 30 }}</div>
-          <date>{{ post.date | date_to_string }}</date>
+{%- include head.html -%}
+<body class="index-page projects-page">
+  {%- include nav.html -%}
+  <div class="page-wrapper <?php echo $category; ?>">
+    <div class="base-content-container">
+      {%- for post in site.posts -%}
+        <a href="{{ post.url }}" class="post-link">
+          <div class="post-item">
+            <div class="post-border-bottom" style="background-image: linear-gradient({{ post.gradient_angle }}deg, {{ post.bg_color_1 }}, {{ post.bg_color_2 }});"></div>
+            {%- if post.header_image != "" -%}
+                <div class="post-image-wrapper" style="background-image: linear-gradient({{ post.gradient_angle }}deg, {{ post.bg_color_1 }}, {{ post.bg_color_2 }});?>">
+                  <div class="post-image-container" style="background-image:url('{{ post.header_image }}')"></div>
+                </div>
+            {%- endif -%}
+            <h4>{{ post.title }}</h4>       
+          {%- if post.post_description != '' -%}
+            <p>{{ post.post_description}}</p>
+          {%- endif -%}
         </div>
+        <p class="subtitle-date">{{ post.date }}</p>
+        </a>
+      {%- endfor -%}
+      <p align="center"><?php posts_nav_link(); ?></p>
+    </div>
+  </div>
+{%- include footer.html -%}
+
+<div class="post-list-container">
+  <div class="post-list-item tb-align-left tb-v-align-center ib-c mb-tr no-image">
+    <div class="post-list-item-bg"></div>
+    <div class="post-list-item-inner">
+      <div class="content-container">
+        <div class="flex-container">
+          <div class="text-box-primary">
+          <h2>Main title</h2>
+          <p>Subtitle</p>
+        </div>
+          <div class="image-box">
+          <!-- <img data-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/143747/Screen%20Shot%202018-03-27%20at%208.08.10%20PM.png"/> -->
+        </div>
+        </div>
+        <div class="meta-content">DATE 2018 • META</div>
       </div>
     </div>
   </div>
 </div>
-{% endfor %}
