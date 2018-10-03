@@ -1,0 +1,94 @@
+---
+label: 'post preview '
+hide_body: false
+is_partial: true
+fields:
+- type: file
+  label: large image
+  name: large_image
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - left-top
+    - left-center
+    - left-bottom
+    - right-top
+    - right-center
+    - right-bottom
+  label: large image align
+  name: large_image_align
+- type: file
+  name: large_image_bg
+  label: large image bg
+- type: select
+  name: large_image_bg_position
+  config:
+    source:
+      type: simple
+    options:
+    - top-left
+    - top-center
+    - top-right
+    - center-left
+    - center-center
+    - center-right
+    - bottom-left
+    - bottom-center
+    - bottom-right
+  label: large image bg position
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - left-top
+    - left-center
+    - left-bottom
+    - right-top
+    - right-center
+    - right-bottom
+  label: large content align
+  name: large_content_align
+- type: select
+  name: large_text_align
+  config:
+    source:
+      type: simple
+    options:
+    - left
+    - right
+    - center
+  label: Large text align
+- type: select
+  name: large_content_meta_position
+  config:
+    source:
+      type: simple
+    options:
+    - top left
+    - top right
+    - bottom left
+    - bottom right
+  label: Large content meta position
+- type: color
+  config:
+    color_format: RGB
+  label: Large content body color
+  name: large_content_body_color
+- type: color
+  config:
+    color_format: Hex
+  label: large content meta color
+  name: large_content_meta_color
+- type: color
+  config:
+    color_format: RGB
+  label: large content heading color
+  name: large_content_heading_color
+- type: color
+  name: large_bg_color
+  config:
+    color_format: RGB
+  label: Large bg color
