@@ -66,6 +66,7 @@ fields:
   template_types:
   - post-preview
 pages:
+- _posts/welcome-to-the-mothership.md
 - _posts/2018-09-16-testing-the-post-theme.md
 - _posts/2018-09-17-october-lettering.md
 - _posts/2018-09-14-block-test.md
