@@ -189,4 +189,4 @@ fields:
     color_format: RGB
   label: Small bg color
   name: small_bg_color
-  default: rgb(255, 0, 0)
+  default: rgb(0, 0, 0)
