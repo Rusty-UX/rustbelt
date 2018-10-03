@@ -3,6 +3,15 @@ label: 'post preview '
 hide_body: false
 is_partial: true
 fields:
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - image-first
+    - text-first
+  label: Large Card Type
+  name: large_card_type
 - type: file
   label: large image
   name: large_image
@@ -75,6 +84,11 @@ fields:
 - type: color
   config:
     color_format: RGB
+  label: large content heading color
+  name: large_content_heading_color
+- type: color
+  config:
+    color_format: RGB
   label: Large content body color
   name: large_content_body_color
 - type: color
@@ -83,12 +97,87 @@ fields:
   label: large content meta color
   name: large_content_meta_color
 - type: color
-  config:
-    color_format: RGB
-  label: large content heading color
-  name: large_content_heading_color
-- type: color
   name: large_bg_color
   config:
     color_format: RGB
   label: Large bg color
+- type: select
+  config:
+    source:
+      type: simple
+    options:
+    - image-first
+    - text-first
+  label: Small Card Type
+  default: image-first
+  name: small_card_type
+- type: file
+  name: small_image
+  label: Small Image
+- type: number
+  name: small_image_width
+  label: Small Image width
+  description: In %
+  default: '100'
+- type: select
+  name: small_image_padding
+  config:
+    source:
+      type: simple
+    options:
+    - none
+    - small
+    - medium
+    - large
+  label: Small Image padding
+  default: none
+- type: file
+  name: small_image_bg
+  label: Small Image BG
+- type: select
+  name: small_image_bg_position
+  config:
+    source:
+      type: simple
+    options:
+    - top-left
+    - top-center
+    - top-right
+    - center-left
+    - center-center
+    - center-right
+    - bottom-left
+    - bottom-center
+    - bottom-right
+  label: Small Image BG Position
+  default: center-center
+- type: select
+  name: small_text_align
+  config:
+    source:
+      type: simple
+    options:
+    - left
+    - center
+    - right
+  label: Small text align
+- type: color
+  config:
+    color_format: RGB
+  label: Small heading color
+  name: small_heading_color
+- type: color
+  config:
+    color_format: RGB
+  label: Small body color
+  name: small_body_color
+- type: color
+  config:
+    color_format: RGB
+  label: Small meta color
+  name: small_meta_color
+- type: color
+  config:
+    color_format: RGB
+  label: Small bg color
+  name: small_bg_color
