@@ -12,6 +12,7 @@ fields:
     - text-first
   label: Large Card Type
   name: large_card_type
+  default: text-first
 - type: file
   label: large image
   name: large_image
@@ -20,14 +21,12 @@ fields:
     source:
       type: simple
     options:
-    - left-top
-    - left-center
-    - left-bottom
-    - right-top
-    - right-center
-    - right-bottom
+    - top
+    - center
+    - bottom
   label: large image align
   name: large_image_align
+  default: center
 - type: file
   name: large_image_bg
   label: large image bg
@@ -47,19 +46,18 @@ fields:
     - bottom-center
     - bottom-right
   label: large image bg position
+  default: center-center
 - type: select
   config:
     source:
       type: simple
     options:
-    - left-top
-    - left-center
-    - left-bottom
-    - right-top
-    - right-center
-    - right-bottom
+    - top
+    - center
+    - bottom
   label: large content align
   name: large_content_align
+  default: center
 - type: select
   name: large_text_align
   config:
@@ -70,6 +68,7 @@ fields:
     - right
     - center
   label: Large text align
+  default: left
 - type: select
   name: large_content_meta_position
   config:
@@ -81,26 +80,31 @@ fields:
     - bottom left
     - bottom right
   label: Large content meta position
+  default: top right
 - type: color
   config:
     color_format: RGB
   label: large content heading color
   name: large_content_heading_color
+  default: rgb(255, 255, 255)
 - type: color
   config:
     color_format: RGB
   label: Large content body color
   name: large_content_body_color
+  default: rgb(255, 255, 255)
 - type: color
   config:
     color_format: Hex
   label: large content meta color
   name: large_content_meta_color
+  default: "#FFFFFF"
 - type: color
   name: large_bg_color
   config:
     color_format: RGB
   label: Large bg color
+  default: rgb(0, 0, 0)
 - type: select
   config:
     source:
@@ -161,23 +165,28 @@ fields:
     - center
     - right
   label: Small text align
+  default: left
 - type: color
   config:
     color_format: RGB
   label: Small heading color
   name: small_heading_color
+  default: rgb(255, 255, 255)
 - type: color
   config:
     color_format: RGB
   label: Small body color
   name: small_body_color
+  default: rgb(255, 255, 255)
 - type: color
   config:
     color_format: RGB
   label: Small meta color
   name: small_meta_color
+  default: rgb(255, 255, 255)
 - type: color
   config:
     color_format: RGB
   label: Small bg color
   name: small_bg_color
+  default: rgb(255, 0, 0)
