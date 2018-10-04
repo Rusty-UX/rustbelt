@@ -30,7 +30,7 @@ post_preview:
   large_image_bg_position: center-left
   large_content_align: center
   large_text_align: left
-  large_content_meta_position: top-right
+  large_content_meta_position: top-left
   large_content_heading_color: rgb(255, 255, 255)
   large_content_body_color: rgb(182, 160, 128)
   large_content_meta_color: "#CDC4B8"
