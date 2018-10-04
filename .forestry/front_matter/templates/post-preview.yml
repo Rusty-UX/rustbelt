@@ -75,10 +75,10 @@ fields:
     source:
       type: simple
     options:
-    - top left
-    - top right
-    - bottom left
-    - bottom right
+    - top-left
+    - top-right
+    - bottom-left
+    - bottom-right
   label: Large content meta position
   default: top right
 - type: color
