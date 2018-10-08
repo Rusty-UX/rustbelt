@@ -1,4 +1,11 @@
+<style>
+  
+  body, html{
+    background-color: white;
+  }
+</style>
 {%- include head.html -%}
+{% comment %}
 <body class="index-page projects-page">
   {%- include nav.html -%}
   <div class="page-wrapper <?php echo $category; ?>">
@@ -24,23 +31,77 @@
     </div>
   </div>
 {%- include footer.html -%}
+{% endcomment %}
 
 <div class="post-list-container">
-  <div class="post-list-item tb-align-left tb-v-align-center ib-c mb-tr no-image">
-    <div class="post-list-item-bg"></div>
-    <div class="post-list-item-inner">
-      <div class="content-container">
-        <div class="flex-container">
-          <div class="text-box-primary">
-          <h2>Main title</h2>
-          <p>Subtitle</p>
+{%- for post in site.posts -%}
+  {% capture length %}{{ post.title | size }}{% endcapture %}
+  {% capture title %}{{ post.title | slugify | truncate: "3", "" }}{% endcapture %}
+  {% capture title_end %}{{ post.title | slice: "-3", "3" }}{% endcapture %}
+  {% capture date %} {{ post.date | date: "%-d" }}{% endcapture %}
+  {% capture post_id %}{{ title }}{{ title_end }}{{ date | replace: " ", ""}}{{ length }}{% endcapture %}
+  {% for block in post.post_preview %}
+  {%- assign template = block.template -%}
+  {%- case template -%}
+    {%- when 'post-preview' -%}
+
+      
+
+      <div id="{{ post_id }}" class="
+        L-type--{{ block.large_card_type }}
+        L-image-align--{{ block.large_image_align }}
+        L-content-align--{{ block.large_content_align }}
+        L-text-align--{{ block.large_text_align }}
+        L-content-meta-position--{{ block.large_content_meta_position }}
+        {% unless block.large_image %}L-image--none{% endunless %}
+        S-type--{{ block.small_card_type }}
+        S-image-width--{{ block.small_image_width }}
+        S-image-padding--{{ block.small_image_padding }}
+        S-image-bg-position--{{ block.small_image_bg_position }}
+        S-text-align--{{ block.small_text_align }}
+        {% unless block.small_image %}S-image--none{% endunless %}
+        post-list-item">
+        <style>
+        #{{ post_id }} .post-list-item-bg{ background-color: {{ block.small_bg_color }}; }
+        #{{ post_id }} h2{ color: {{ block.small_heading_color }} ; }
+        #{{ post_id }} p{ color: {{ block.small_body_color }}; }
+        #{{ post_id }} .meta-content{ color: {{ block.small_meta_color }}; }
+        @media screen and (min-width: 600px){
+          #{{ post_id }} .post-list-item-bg{ background-color: {{ block.large_bg_color }}; }
+          #{{ post_id }} h2{ color: {{ block.large_content_heading_color }} ; }
+          #{{ post_id }} p{ color: {{ block.large_content_body_color }}; }
+          #{{ post_id }} .meta-content{ color: {{ block.large_content_meta_color }}; }
+        }
+        </style>
+        <div class="post-list-item-bg"></div>
+        {% if block.small_image_bg %}
+        <div class="S-post-list-image-bg S-image-bg-position--{{ block.small_image_bg_position }}" style="background-image:url('{{ site.cloudinary_url }}/{{ block.small_image_bg }}')"></div>
+        {% endif %}
+        {% if block.large_image_bg %}
+        <div class="L-post-list-image-bg L-image-bg-position--{{ block.large_image_bg_position }}" style="background-image:url('{{ site.cloudinary_url }}/{{ block.large_image_bg }}')"></div>
+        {% endif %}
+        <div class="post-list-item-inner">
+          <div class="content-container">
+            <div class="flex-container">
+              <div class="text-box-primary">
+              <h2>Main title</h2>
+              <p>Subtitle</p>
+            </div>
+              <div class="image-box">
+              {% if block.small_image %}
+                <img class="S-image-box" src="{{ site.cloudinary_url }}/{{ block.small_image }}"/>
+              {% endif %}
+              {% if block.large_image %}
+                <img class="L-image-box" src="{{ site.cloudinary_url }}/{{ block.large_image }}"/>
+              {% endif %}        
+              </div>
+            </div>
+            <div class="meta-content">DATE 2018 • META</div>
+          </div>
         </div>
-          <div class="image-box">
-          <!-- <img data-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/143747/Screen%20Shot%202018-03-27%20at%208.08.10%20PM.png"/> -->
-        </div>
-        </div>
-        <div class="meta-content">DATE 2018 • META</div>
       </div>
-    </div>
-  </div>
+    {%- endcase -%}
+  {% endfor %}
+{% endfor %}
+
 </div>

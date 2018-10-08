@@ -228,7 +228,6 @@ html, body{
 $two-col-breakpoint: 600px;
 
 .post-list-item-bg{
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/143747/Screen%20Shot%202018-09-24%20at%208.34.27%20PM.png);
   position: absolute;
   top: 0;
   left: 0;
@@ -267,7 +266,7 @@ hr{
 
 img{
   max-width: 100%;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
 }
 
 // .image-box{
@@ -278,6 +277,7 @@ img{
 /* TEXT BOX */
 
 .post-list-item{
+  max-width: 65rem;
   width: 100%;
   background-color: #efefef;
   position: relative;
@@ -287,12 +287,12 @@ img{
   }
 }
 // DYNAMIC CLASS v
-.post-list-item.no-image{
-   min-height: calc(10rem + 30vw);
-  @media screen and (min-width: $two-col-breakpoint) {
-    min-height: 0;
-  }
-}
+// .post-list-item.no-image{
+//    min-height: calc(10rem + 30vw);
+//   @media screen and (min-width: $two-col-breakpoint) {
+//     min-height: 0;
+//   }
+// }
 
 .post-list-item .text-box{
   font-weight: 400;
@@ -324,7 +324,10 @@ img{
   padding: 5vw;
   box-sizing: border-box;
   width: 100%; 
-  height: 100%;
+  // height: 100%;
+  @media screen and (min-width: 440px) {
+    padding: 1.4rem;
+  }
   @media screen and (min-width: $two-col-breakpoint) {
       padding: 3rem;
     position: absolute;
@@ -333,7 +336,7 @@ img{
 
 .content-container{
   position: relative;
-  height: 100%;
+  // height: 100%;
   width: 100%;
 }
 
@@ -342,7 +345,7 @@ img{
   flex-direction: column-reverse;
   flex: no-flex;
   width: 100%; 
-  height: 100%;
+  // height: 100%;
   box-sizing: border-box;
   @media screen and (min-width: $two-col-breakpoint) {
     flex-direction: row;
@@ -351,10 +354,6 @@ img{
     left: 0;
   }
 }
-
-.ib-t .image-box{ align-self: flex-start }
-.ib-c .image-box{ align-self: center; }
-.ib-b .image-box{ align-self: flex-end; }
 
 .meta-content{
   font-family: "Source Code Pro";
@@ -370,10 +369,6 @@ img{
   }
 }
   @media screen and (min-width: $two-col-breakpoint) {
-.mb-tl .meta-content{ top: 0; left: 0; bottom: unset; right: unset; }
-.mb-tr .meta-content{ top: 0; right: 0; bottom: unset; left: unset;}
-.mb-bl .meta-content{ bottom: 0; left: 0; top: unset; right: unset;}
-.mb-br .meta-content{ bottom: 0; right: 0; top: unset; left: unset;}
 }
 
 .text-box-primary{
@@ -384,18 +379,103 @@ img{
   @media screen and (min-width: $two-col-breakpoint) {
     width: 50%;
   }
+}       
+// post-list-item 
+// tb-align-left 
+// tb-v-align-center 
+// ib-c 
+// mb-tr 
+// no-image
+
+// .tb-tr .post-list-item-inner,
+// .tb-cr .post-list-item-inner,
+// .tb-br .post-list-item-inner{
+//   flex-direction: row-reverse;
+// }
+
+.S-post-list-image-bg,
+.L-post-list-image-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
 }
 
+@media screen and (max-width: ($two-col-breakpoint - 1 )) {
 
 
-.tb-v-align-center .text-box-primary{ align-self: center; }
-.tb-v-align-top .text-box-primary{ align-self: flex-start }
-.tb-v-align-bottom .text-box-primary{ align-self: flex-end; }
+.S-image--none{ height: calc(20rem + 5vw); }
+.S-image--none .content-container, .S-image--none .post-list-item-inner, .S-image--none .flex-container{ height: 100%; }
 
-.tb-tr .post-list-item-inner,
-.tb-cr .post-list-item-inner,
-.tb-br .post-list-item-inner{
-  flex-direction: row-reverse;
+.S-image-bg-position--top-left, .L-image-bg-position--top-left { background-position: left top; }
+.S-image-bg-position--top-center, .L-image-bg-position--top-center { background-position: center top;}
+.S-image-bg-position--top-right, .L-image-bg-position--top-right { background-position: right top;}
+.S-image-bg-position--center-left, .L-image-bg-position--center-left { background-position: left center;}
+.S-image-bg-position--center-center, .L-image-bg-position--center-center { background-position: center center;}
+.S-image-bg-position--center-right, .L-image-bg-position--center-right { background-position: right center;}
+.S-image-bg-position--bottom-left, .L-image-bg-position--bottom-left { background-position: left bottom;}
+.S-image-bg-position--bottom-center, .L-image-bg-position--bottom-center { background-position: center bottom;}
+.S-image-bg-position--bottom-right, .L-image-bg-position--bottom-right { background-position: right bottom;}
+
+
+.L-post-list-image-bg, .L-image-box{ display: none; }
+
+.S-type--image-first .flex-container{ flex-direction: column-reverse; }
+
+.S-type--image-first .image-box{ 
+  margin-bottom: 5vw; 
+  @media screen and (min-width: 440px) {
+    margin-bottom: 1.4rem;
+  }
 }
 
+.S-image-width--100{}
+.S-image-width--90{}
+.S-image-width--75{}
+.S-image-width--50{}
+.S-image-width--25{}
 
+.S-image-padding--none{}
+.S-image-padding--small{}
+.S-image-padding--medium{}
+.S-image-padding--large{}
+
+.S-text-align--left .text-box-primary{ text-align: left; }
+.S-text-align--center .text-box-primary{ text-align: center;}
+.S-text-align--right .text-box-primary{ text-align: right;} 
+
+.S-post-list-image-bg{}
+
+}
+
+@media screen and (min-width: $two-col-breakpoint) {
+
+  // .L-image-none{ min-height: calc(10rem + 30vw); }
+  .content-container, .post-list-item-inner, .flex-container{ height: 100%; }
+
+  .S-post-list-image-bg, .S-image-box{ display: none; }
+  .L-post-list-image-bg, .L-image-box{ display: block; }
+
+  .L-type--text-first .flex-container{ flex-direction: row; }
+  .L-type--image-first .flex-container{ flex-direction: row-reverse; }
+
+  .L-image-align--top .image-box{ align-self: flex-start; }
+  .L-image-align--center .image-box{ align-self: center; }
+  .L-image-align--bottom .image-box{ align-self: flex-end; }
+
+  .L-content-align--top .text-box-primary{ align-self: flex-start; }
+  .L-content-align--center .text-box-primary{ align-self: center; }
+  .L-content-align--bottom .text-box-primary{ align-self: flex-end; }
+
+  .L-text-align--left .text-box-primary{ text-align: left }
+  .L-text-align--center .text-box-primary{ text-align: center }
+  .L-text-align--right .text-box-primary{ text-align: right }
+
+  .L-content-meta-position--top-left .meta-content{ top: 0; left: 0; bottom: unset; right: unset; }
+  .L-content-meta-position--top-right .meta-content{ top: 0; right: 0; bottom: unset; left: unset; }
+  .L-content-meta-position--bottom-left .meta-content{ bottom: 0; left: 0; top: unset; right: unset; }
+  .L-content-meta-position--bottom-right .meta-content{ bottom: 0; right: 0; top: unset; left: unset; }
+
+}
