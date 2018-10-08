@@ -30,7 +30,6 @@ post_preview:
   large_image_bg_position: center-left
   large_content_align: center
   large_text_align: left
-  large_content_meta_position: bottom-left
   large_content_heading_color: rgb(255, 255, 255)
   large_content_body_color: rgb(182, 160, 128)
   large_content_meta_color: "#CDC4B8"
@@ -45,6 +44,6 @@ post_preview:
   small_meta_color: rgb(103, 98, 92)
   small_bg_color: rgb(0, 0, 0)
   large_image_bg: "/v1538611204/large-mothership-bg.png"
-  small_image: "/v1538611318/small-mothership-image.png"
+  small_image: "/v1539012647/small-mothership-image.png"
 
 ---
