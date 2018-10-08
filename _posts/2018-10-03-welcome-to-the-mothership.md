@@ -45,6 +45,6 @@ post_preview:
   small_meta_color: rgb(103, 98, 92)
   small_bg_color: rgb(0, 0, 0)
   large_image_bg: "/v1538611204/large-mothership-bg.png"
-  small_image: "/v1538611318/small-mothership-image.png"
+  small_image: "/v1539012647/small-mothership-image.png"
 
 ---
