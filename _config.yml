@@ -5,7 +5,7 @@ cloudinary_url: https://res.cloudinary.com/rustycloud/image/upload
 baseurl: 
 sass:
   sass_dir: assets/css/sass
-permalink: /:categories/:year/:title:output_ext
+permalink: /:categories/:year/:title
 defaults:
   - scope:
       path: ""
@@ -23,6 +23,7 @@ collections:
     permalink: "/about/:path/"
   posts:
     output: true
+    permalink: "/:categories/:year/:title"
   projects:
     output: true
     permalink: "/projects/:path/"
