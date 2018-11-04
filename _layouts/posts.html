@@ -37,16 +37,13 @@
 {%- for post in site.posts -%}
   {% capture length %}{{ post.title | size }}{% endcapture %}
   {% capture title %}{{ post.title | slugify | truncate: "3", "" }}{% endcapture %}
-  {% capture title_end %}{{ post.title | slice: "-3", "3" }}{% endcapture %}
+  {% capture title_end %}{{ post.title | slugify | slice: "-3", "3" }}{% endcapture %}
   {% capture date %} {{ post.date | date: "%-d" }}{% endcapture %}
   {% capture post_id %}{{ title }}{{ title_end }}{{ date | replace: " ", ""}}{{ length }}{% endcapture %}
   {% for block in post.post_preview %}
   {%- assign template = block.template -%}
   {%- case template -%}
     {%- when 'post-preview' -%}
-
-      
-
       <div id="{{ post_id }}" class="
         L-type--{{ block.large_card_type }}
         L-image-align--{{ block.large_image_align }}
@@ -84,8 +81,8 @@
           <div class="content-container">
             <div class="flex-container">
               <div class="text-box-primary">
-              <h2>Main title</h2>
-              <p>Subtitle</p>
+              <h2>{{ post.title }}</h2>
+              <p>{{ post.subtitle }}</p>
             </div>
               <div class="image-box">
               {% if block.small_image %}

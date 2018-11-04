@@ -17,6 +17,7 @@ defaults:
     values:
       layout: post
 collections:
+  collections_dir: content
   people:
     output: true
     permalink: "/about/:path/"
