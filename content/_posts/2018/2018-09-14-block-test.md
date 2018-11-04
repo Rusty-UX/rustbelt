@@ -55,7 +55,7 @@ post_preview:
   small_body_color: rgb(255, 255, 255)
   small_meta_color: rgb(255, 255, 255)
   small_bg_color: rgb(0, 0, 0)
-show_header_image_on_post: true
+show_header_image_on_post: false
 header_type: contain
 post_header_image: "/v1538611204/large-mothership-bg.png"
 
