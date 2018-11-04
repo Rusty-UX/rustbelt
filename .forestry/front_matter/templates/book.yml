@@ -49,6 +49,3 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-pages:
-- _books/lorraine-is-the-best.md
-- _books/testing-post-theme.md
