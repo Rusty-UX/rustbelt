@@ -65,3 +65,5 @@ fields:
     max: '1'
   template_types:
   - post-preview
+pages:
+- content/_posts/2018/testing123.md
