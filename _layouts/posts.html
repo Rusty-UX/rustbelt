@@ -6,7 +6,7 @@
 </style>
 {%- include head.html -%}
 {% comment %}
-<body class="index-page projects-page">
+<body class="index-page projects-page post-list-body">
   {%- include nav.html -%}
   <div class="page-wrapper <?php echo $category; ?>">
     <div class="base-content-container">
@@ -44,6 +44,7 @@
   {%- assign template = block.template -%}
   {%- case template -%}
     {%- when 'post-preview' -%}
+    <a href="{{ post.url }}" class="post-link">
       <div id="{{ post_id }}" class="
         L-type--{{ block.large_card_type }}
         L-image-align--{{ block.large_image_align }}
@@ -97,6 +98,7 @@
           </div>
         </div>
       </div>
+    </a>
     {%- endcase -%}
   {% endfor %}
 {% endfor %}

@@ -1,7 +1,7 @@
 
-.base-content-container{
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+.post-list-container{
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 // // LAYOUT - POST - LIST
@@ -237,7 +237,7 @@ $two-col-breakpoint: 600px;
   background-size: cover;
 }
 
-body{
+.post-list-body{
   padding: 5vmax;
 }
 
@@ -247,6 +247,8 @@ body{
   @media screen and (min-width: $two-col-breakpoint)            {
     max-width: 50rem;
   }
+  // padding-bottom: calc((100vw - 50rem)/2);
+
 }
 
 .image-container{
@@ -281,10 +283,39 @@ img{
   width: 100%;
   background-color: #efefef;
   position: relative;
+  // Equal margin to spacing
+  // margin-bottom: 2rem;
+  margin-bottom: calc((100vh - 60%)/16);
+
   @media screen and (min-width: $two-col-breakpoint) {
     padding-bottom: 60%;
     min-height: 0;
+    // margin-bottom: 2rem;
   }
+  @media screen and (min-width: 1000px){
+    // margin-bottom: calc((100vw - 50rem)/4);
+    margin-bottom: calc((100vh - 60%)/8);
+  }
+}
+
+.post-link:first-of-type .post-list-item{
+  margin-top: 4rem;
+  @media screen and (min-width: $two-col-breakpoint) {
+    margin-top: 6rem;
+  }
+  @media screen and (min-width: 1200px){
+    margin-top: calc((100vh - 60%)/2);
+  }
+}
+
+.post-link:last-of-type .post-list-item{
+  margin-bottom: 4rem;
+  @media screen and (min-width: $two-col-breakpoint) {
+    margin-bottom: 6rem;
+  }
+  @media screen and (min-width: 1200px){
+   margin-bottom: calc((100vh - 60%)/2);
+ }
 }
 // DYNAMIC CLASS v
 // .post-list-item.no-image{

@@ -16,17 +16,20 @@ defaults:
       type: posts
     values:
       layout: post
+collections_dir: content
 collections:
-  collections_dir: content
-  people:
-    output: true
-    permalink: "/about/:path/"
   posts:
     output: true
-    permalink: "/:categories/:year/:title"
+    relative_directory: "/content/_posts/"
+    permalink: "post/:year/:title"
   projects:
     output: true
-    permalink: "/projects/:path/"
+    relative_directory: "/content/_projects/"
+    permalink: "project/:year/:title"
+  books:
+    output: true
+    relative_directory: "/content/_books/"
+    permalink: "book/:year/:title"
 # tag_page_layout: tag_page
 # tag_page_dir: tag
 jekyll-archives:

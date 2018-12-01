@@ -32,6 +32,7 @@
 		<div class="base-bg-layer base-bg-layer-article"></div>
 		<div id="content" class="base-top-layer article-top-layer">
 		{%- if post_header_image != "" and show_header_image_on_post == "true" -%}	
+		<div class="header-image-contain">
 		<div class="article-header-image">
 			{%- if header_type == "contain" -%}
 				<img src="{{ site.cloudinary_url }}/{{ post_header_image }}"/>
@@ -48,6 +49,7 @@
 			{%- else -%}
 				<div class="header-image-bg" style="background-image:url({{ site.cloudinary_url }}/{{ post_header_image }});"></div>
 			{%- endif -%}
+		</div>
 		</div>
 		{%- endif -%}
 			<div class="base-content-container">
@@ -92,7 +94,7 @@
 			   		<span class="control-label-text">Previous</span>
 			   	</div>
 			   	<div class="previous-post-name control-post-name">
-			   		<?php echo get_the_title( $prev_post->ID ); ?>
+			   		ASDF
 			   	</div>
 		   	</a>
 			<?php } ?>
@@ -112,7 +114,7 @@
 			   		<span class="control-label-action">→</span>
 			   	</div>
 			   	<div class="next-post-name control-post-name">
-			   		<?php echo get_the_title( $next_post->ID ); ?>
+			   		ASDF
 			   	</div>
 		   	</a>
 			<?php } ?>
