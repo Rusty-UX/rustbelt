@@ -32,7 +32,8 @@
   </div>
 {%- include footer.html -%}
 {% endcomment %}
-
+{%- include nav.html -%}
+<body class="posts-page">
 <div class="post-list-container">
 {%- for post in site.posts -%}
   {% capture length %}{{ post.title | size }}{% endcapture %}
@@ -104,3 +105,4 @@
 {% endfor %}
 
 </div>
+</body>
